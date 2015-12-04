@@ -1,0 +1,6 @@
+framework module Pods_Finfo {
+  umbrella header "Pods-Finfo-umbrella.h"
+
+  export *
+  module * { export * }
+}

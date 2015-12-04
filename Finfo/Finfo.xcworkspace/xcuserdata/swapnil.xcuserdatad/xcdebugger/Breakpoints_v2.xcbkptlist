@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Finfo/ViewController.swift"
+            timestampString = "465936066.427241"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "setPieChart(_:values:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Finfo/BanksComparisonMenuViewController.swift"
+            timestampString = "466630130.752356"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "BanksComparisonMenuViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finfo.BanksComparisonMenuViewController.bankPlusClicked.setter : Swift.Bool"
+                  moduleName = "Finfo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swapnil/work/workspace/swift/Finfo/Finfo/BanksComparisonMenuViewController.swift"
+                  timestampString = "466630592.60628"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finfo.BanksComparisonMenuViewController.bankPlusClicked.materializeForSet : Swift.Bool"
+                  moduleName = "Finfo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swapnil/work/workspace/swift/Finfo/Finfo/BanksComparisonMenuViewController.swift"
+                  timestampString = "466630592.606476"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finfo.BanksComparisonMenuViewController.init (Finfo.BanksComparisonMenuViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; Finfo.BanksComparisonMenuViewController"
+                  moduleName = "Finfo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swapnil/work/workspace/swift/Finfo/Finfo/BanksComparisonMenuViewController.swift"
+                  timestampString = "466630592.60666"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "141">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finfo.BanksComparisonMenuViewController.init (Finfo.BanksComparisonMenuViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; Swift.Optional&lt;Finfo.BanksComparisonMenuViewController&gt;"
+                  moduleName = "Finfo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swapnil/work/workspace/swift/Finfo/Finfo/BanksComparisonMenuViewController.swift"
+                  timestampString = "466630592.606843"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "73">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Finfo/MenuUIViewController.swift"
+            timestampString = "466759139.331933"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "prepareForSegue(_:sender:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
