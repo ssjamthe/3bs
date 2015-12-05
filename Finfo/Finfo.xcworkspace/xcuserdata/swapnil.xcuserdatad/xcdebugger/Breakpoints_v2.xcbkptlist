@@ -104,13 +104,154 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Finfo/MenuUIViewController.swift"
-            timestampString = "466759139.331933"
+            timestampString = "471042482.93994"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "231"
+            endingLineNumber = "231"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Finfo/MenuData.swift"
+            timestampString = "471041827.754141"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "MenuData"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finfo.MenuData.bankNames.setter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "Finfo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swapnil/work/workspace/gitrepos/3bs/Finfo/Finfo/MenuData.swift"
+                  timestampString = "471041828.76314"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finfo.MenuData.bankNames.materializeForSet : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "Finfo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swapnil/work/workspace/gitrepos/3bs/Finfo/Finfo/MenuData.swift"
+                  timestampString = "471041828.763259"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finfo.MenuData.init (Finfo.MenuData.Type)() -&gt; Finfo.MenuData"
+                  moduleName = "Finfo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swapnil/work/workspace/gitrepos/3bs/Finfo/Finfo/MenuData.swift"
+                  timestampString = "471041828.763374"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "103">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Finfo/MenuData.swift"
+            timestampString = "471041827.754141"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "MenuData"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finfo.MenuData.productSubproductsMap.getter : Swift.Dictionary&lt;Swift.String, Swift.Set&lt;Swift.String&gt;&gt;"
+                  moduleName = "Finfo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swapnil/work/workspace/gitrepos/3bs/Finfo/Finfo/MenuData.swift"
+                  timestampString = "471041664.552185"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finfo.MenuData.productSubproductsMap.setter : Swift.Dictionary&lt;Swift.String, Swift.Set&lt;Swift.String&gt;&gt;"
+                  moduleName = "Finfo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swapnil/work/workspace/gitrepos/3bs/Finfo/Finfo/MenuData.swift"
+                  timestampString = "471041664.55239"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finfo.MenuData.productSubproductsMap.materializeForSet : Swift.Dictionary&lt;Swift.String, Swift.Set&lt;Swift.String&gt;&gt;"
+                  moduleName = "Finfo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swapnil/work/workspace/gitrepos/3bs/Finfo/Finfo/MenuData.swift"
+                  timestampString = "471041664.552557"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finfo.MenuData.init (Finfo.MenuData.Type)() -&gt; Finfo.MenuData"
+                  moduleName = "Finfo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swapnil/work/workspace/gitrepos/3bs/Finfo/Finfo/MenuData.swift"
+                  timestampString = "471041664.552705"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "566">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

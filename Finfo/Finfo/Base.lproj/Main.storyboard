@@ -83,41 +83,49 @@
                                 <rect key="frame" x="-17" y="79" width="188" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" id="Qjp-k6-7qz">
-                                <rect key="frame" x="0.0" y="216" width="319" height="323"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="cnA-zu-9GC" kind="embed" identifier="banksComparisonMenuSegue" id="1jK-Mr-ra3"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" id="2lX-if-UYk">
-                                <rect key="frame" x="0.0" y="216" width="319" height="323"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="x9A-9Z-Igs" kind="embed" identifier="banksMenuSegue" id="b9F-RU-7pz"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" id="dpM-4X-9aF">
-                                <rect key="frame" x="0.0" y="216" width="319" height="323"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="a8o-Xe-Rqh" kind="embed" identifier="productsMenuSegue" id="ecs-yB-uiA"/>
-                                </connections>
-                            </containerView>
                             <pickerView contentMode="scaleToFill" id="z1L-B2-LMm">
                                 <rect key="frame" x="152" y="79" width="157" height="137"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WG6-2I-kPN">
+                                <rect key="frame" x="31" y="394" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sub Product+"/>
+                                <connections>
+                                    <action selector="subProductPlusAction:" destination="QKI-Fe-XQJ" eventType="touchUpInside" id="WQS-zA-Njw"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="wg5-u5-mKz">
+                                <rect key="frame" x="30" y="344" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="touchDownProductTextAction:" destination="QKI-Fe-XQJ" eventType="touchDown" id="vqw-D7-UaY"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8xA-1S-yfu">
+                                <rect key="frame" x="31" y="289" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Banks+"/>
+                                <connections>
+                                    <action selector="banksPlusAction:" destination="QKI-Fe-XQJ" eventType="touchUpInside" id="ruK-h5-Dwj"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Sts-25-GR5">
+                                <rect key="frame" x="143" y="271" width="166" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="PnK-Er-gg2"/>
                     <connections>
-                        <outlet property="banksComparisonMenu" destination="Qjp-k6-7qz" id="OeK-R4-HDW"/>
-                        <outlet property="banksMenu" destination="2lX-if-UYk" id="KHb-MK-MRE"/>
                         <outlet property="dataReprsentationPicker" destination="z1L-B2-LMm" id="MQT-cT-hVK"/>
-                        <outlet property="dataTypePicker" destination="JEx-ON-eNm" id="2oi-QV-6gY"/>
-                        <outlet property="productsMenu" destination="dpM-4X-9aF" id="JhG-Nb-iSp"/>
+                        <outlet property="dataTypePicker" destination="JEx-ON-eNm" id="i4T-Vp-phl"/>
+                        <outlet property="menuList" destination="Sts-25-GR5" id="pd7-ie-4ti"/>
+                        <outlet property="productTextInput" destination="wg5-u5-mKz" id="aZB-Sx-HKO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KeU-RU-bbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -141,156 +149,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rD-B7-McV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="248" y="-301.04000000000002"/>
-        </scene>
-        <!--Banks Comparison Menu View Controller-->
-        <scene sceneID="AqH-z0-IKf">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="cnA-zu-9GC" customClass="BanksComparisonMenuViewController" customModule="Finfo" sceneMemberID="viewController">
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3qW-5d-9xT">
-                        <rect key="frame" x="0.0" y="0.0" width="319" height="323"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6J0-gs-K4s">
-                                <rect key="frame" x="49" y="99" width="64" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="+Product">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="plusProductAction:" destination="cnA-zu-9GC" eventType="touchUpInside" id="3ub-Jp-FEs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="acW-0H-wBA">
-                                <rect key="frame" x="49" y="50" width="45" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="+Bank">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="plusBankAction:" destination="cnA-zu-9GC" eventType="touchUpInside" id="G0c-cd-Ex2"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sOP-2V-xUd">
-                                <rect key="frame" x="141" y="20" width="169" height="238"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eR2-QF-yde">
-                                <rect key="frame" x="42" y="147" width="91" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="+SubProduct">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="plusSubproductAction:" destination="cnA-zu-9GC" eventType="touchUpInside" id="UDk-LQ-XHW"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                    <connections>
-                        <outlet property="menuList" destination="sOP-2V-xUd" id="iMz-JC-rmR"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ksi-J4-F6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="491.5" y="938.5"/>
-        </scene>
-        <!--Banks Menu View Controller-->
-        <scene sceneID="O60-xr-Q8L">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="x9A-9Z-Igs" customClass="BanksMenuViewController" customModule="Finfo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eB3-3O-6a3">
-                        <rect key="frame" x="0.0" y="0.0" width="319" height="323"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RPP-of-ZlO">
-                                <rect key="frame" x="42" y="122" width="64" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="+Product">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="plusProductAction:" destination="x9A-9Z-Igs" eventType="touchUpInside" id="rNJ-SF-D7U"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jxN-zq-GH4">
-                                <rect key="frame" x="42" y="173" width="95" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="+Sub Product">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="plusSubproductAction:" destination="x9A-9Z-Igs" eventType="touchUpInside" id="QvW-iO-ecK"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z8k-dD-uK1">
-                                <rect key="frame" x="147" y="20" width="164" height="217"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="HdT-B1-cXj">
-                                <rect key="frame" x="40" y="74" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
-                                </accessibility>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="touchDownBankTextAction:" destination="x9A-9Z-Igs" eventType="touchDown" id="5o9-w6-owB"/>
-                                </connections>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                    <connections>
-                        <outlet property="bankTextInput" destination="HdT-B1-cXj" id="5oo-Aa-6Rr"/>
-                        <outlet property="menuList" destination="Z8k-dD-uK1" id="fyQ-1q-S7V"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="E9b-Iy-g4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-13.5" y="908.5"/>
-        </scene>
-        <!--Products Menu View Controller-->
-        <scene sceneID="PVP-IM-o9P">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="a8o-Xe-Rqh" customClass="ProductsMenuViewController" customModule="Finfo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="MPJ-l6-Eq2">
-                        <rect key="frame" x="0.0" y="0.0" width="319" height="323"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AOe-CG-DXx">
-                                <rect key="frame" x="65" y="38" width="45" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="+Bank">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8bS-YM-CBG">
-                                <rect key="frame" x="65" y="121" width="95" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="+Sub Product">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="mZy-Wc-7kR">
-                                <rect key="frame" x="65" y="76" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ckk-62-kLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="747.5" y="-302.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
