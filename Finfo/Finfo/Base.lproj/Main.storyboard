@@ -13,21 +13,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banks Comparison" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WUA-Yb-HXi">
-                                <rect key="frame" x="82" y="5" width="147" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QYM-oG-Yly">
-                                <rect key="frame" x="93" y="25" width="39" height="30"/>
+                                <rect key="frame" x="94" y="11" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Menu">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="QKI-Fe-XQJ" kind="push" id="Ses-bU-RRW"/>
+                                    <segue destination="QKI-Fe-XQJ" kind="push" identifier="menuSegue" id="Ses-bU-RRW"/>
                                 </connections>
                             </button>
                             <webView contentMode="scaleToFill" id="p0p-z9-wtS">
@@ -35,26 +28,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <view contentMode="scaleToFill" id="gVe-4T-fTS" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="53" width="280" height="442"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aIK-4u-Dfi">
-                                        <rect key="frame" x="71" y="389" width="138" height="53"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" id="XJw-dV-4Ic">
+                                <rect key="frame" x="10" y="43" width="300" height="452"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="zxA-1h-iUs" kind="embed" identifier="pieChartSegue" id="Bnh-Q9-k4A"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" id="gKI-wo-yHm">
+                                <rect key="frame" x="12" y="43" width="300" height="452"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="tyQ-B2-Dvq" kind="embed" id="aaT-5T-7pX"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="2pb-Hj-stG"/>
                     <connections>
-                        <outlet property="pieChart" destination="gVe-4T-fTS" id="Jcy-CE-Tnw"/>
+                        <outlet property="barChartView" destination="gKI-wo-yHm" id="PQz-b6-xKm"/>
+                        <outlet property="pieChartView" destination="XJw-dV-4Ic" id="KJL-ki-v2N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -130,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KeU-RU-bbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1306" y="348"/>
+            <point key="canvasLocation" x="1310" y="396"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jqb-Xj-394">
@@ -149,6 +143,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rD-B7-McV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="248" y="-301.04000000000002"/>
+        </scene>
+        <!--Pie Chart View Controller-->
+        <scene sceneID="Aye-mS-Kpe">
+            <objects>
+                <viewController id="zxA-1h-iUs" customClass="PieChartViewController" customModule="Finfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8cn-Ds-XPH">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="452"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="4y1-oa-Nd2" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="15" y="19" width="260" height="422"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="pieChart" destination="4y1-oa-Nd2" id="5iI-wM-M9n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="003-DX-4a2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197" y="347.5"/>
+        </scene>
+        <!--Bar Chart View Controller-->
+        <scene sceneID="2GR-uO-nN2">
+            <objects>
+                <viewController id="tyQ-B2-Dvq" customClass="BarChartViewController" customModule="Finfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QKV-cD-9Ax">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="452"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="eLA-Ua-eAT" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="6" y="10" width="286" height="431"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="barChart" destination="eLA-Ua-eAT" id="3V9-hM-3Yg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n85-EG-dzu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="255"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

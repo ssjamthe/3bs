@@ -19,10 +19,12 @@ class MenuUIViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     var bankPlusClicked = false
     var subproductPlusClicked = false
     
-    let dataRepresentationPickerOptions=[["Pie Chart","Line Chart","Tabular Data","Row Data"]]
+    let dataRepresentationPickerOptions=[["Pie Chart","Bar Chart","Tabular Data","Raw Data"]]
+    let dataRepresentationOptions = [[DataRepresentation.PIE_CHART,DataRepresentation.BAR_CHART,DataRepresentation.TABULAR,DataRepresentation.RAW_DATA]]
     
     
     let dataTypePickerOptions=[["Complaints","Timely Response Percent","Disputed Response Percent"]]
+    let dataTypeOptions = [[DataType.COMPLAINTS,DataType.TIMELY_RESPONSE_PERCENT,DataType.DISPUTED_RESPONSE_PERCENT]]
     
     var menuData : MenuData!
     
@@ -193,6 +195,9 @@ class MenuUIViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
+        print("compnent")
+        print(component)
+        
         if(pickerView == dataTypePicker)
         {
             
@@ -207,19 +212,43 @@ class MenuUIViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
+        print("compnent")
+        print(component)
         if(pickerView == dataTypePicker)
         {
+            if(dataTypeOptions[component][row] == self.menuData.selectedDataType)
+            {
+                pickerView.selectRow(row,inComponent: component,animated: false)
+            }
             
             return dataTypePickerOptions[component][row]
+            
         }
         else
         {
+            if(dataRepresentationOptions[component][row] == self.menuData.selectedRepresentation)
+            {
+                pickerView.selectRow(row,inComponent: component,animated: false)
+            }
+            
             return dataRepresentationPickerOptions[component][row]
         }
         
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if(pickerView == dataTypePicker)
+        {
+            self.menuData.selectedDataType = dataTypeOptions[component][row]
+        }
+        else
+        {
+            self.menuData.selectedRepresentation = dataRepresentationOptions[component][row]
+            
+        }
+        
+        
     }
     
     

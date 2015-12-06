@@ -21,4 +21,8 @@ class MenuData
     var selectedProduct:String = "Credit Card"
     var selectedBanks:Set<String> = Set<String>()
     var selectedSubProducts:Set<String> = Set<String>()
+    
+    
+    var selectedRepresentation = DataRepresentation.PIE_CHART
+    var selectedDataType = DataType.COMPLAINTS
 }

@@ -10,19 +10,17 @@ import UIKit
 import Charts
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var pieChart: PieChartView!
+    
     var menuData = MenuData()
     
+    
+    @IBOutlet weak var pieChartView: UIView!
+    @IBOutlet weak var barChartView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let banks=["SBI","ICICI","HDFC","HSBC"]
-        let complaints=[10.0,5.0,15.0,20.0]
-        
-        setPieChart(banks,values:complaints)
-        
+        showSelectedView()
         
         print("Inside ViewController.viewDidLoad " )
     }
@@ -33,50 +31,43 @@ class ViewController: UIViewController {
         print("Inside ViewController.viewDidAppear ")
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    func showSelectedView()
+    {
+        switch menuData.selectedRepresentation
+        {
+        case .PIE_CHART:
+            pieChartView.hidden = false
+            barChartView.hidden = true
+            
+        case .BAR_CHART:
+            pieChartView.hidden = true
+            barChartView.hidden = false
+        default:
+            print("default case should not happen")
+            
+        }
+        
+    }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        
+        if(segue.identifier == "menuSegue") {
             let svc = segue.destinationViewController as! MenuUIViewController;
             svc.menuData = menuData
+        }
+        else if(segue.identifier == "pieChartSegue")
+        {
+            
+        }
         
     }
     
-    func setPieChart(dataPoints: [String], values: [Double]) {
-        
-        var dataEntries: [ChartDataEntry] = []
-        
-        for i in 0..<dataPoints.count {
-            let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
-            dataEntries.append(dataEntry)
-        }
-        
-        let pieChartDataSet = PieChartDataSet(yVals: dataEntries, label: "Complaints")
-        let pieChartData = PieChartData(xVals: dataPoints, dataSet: pieChartDataSet)
-        pieChart.data = pieChartData
-        
-        var colors: [UIColor] = []
-        
-        for i in 0..<dataPoints.count {
-            let red = Double(arc4random_uniform(256))
-            let green = Double(arc4random_uniform(256))
-            let blue = Double(arc4random_uniform(256))
-            
-            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
-            colors.append(color)
-        }
-        
-        pieChartDataSet.colors = colors
-        
-      
-        
-    }
-
-
+    
 }
 

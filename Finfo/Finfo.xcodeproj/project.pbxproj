@@ -18,6 +18,10 @@
 		55E618EC1BBDC23400F2BE30 /* BanksComparisonMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E618EB1BBDC23400F2BE30 /* BanksComparisonMenuViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		55E618EE1BBDD20C00F2BE30 /* BanksComparisonMenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E618ED1BBDD20C00F2BE30 /* BanksComparisonMenuData.swift */; settings = {ASSET_TAGS = (); }; };
 		55E6E3501BBE6BAA00EE20E1 /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E6E34F1BBE6BAA00EE20E1 /* MenuData.swift */; settings = {ASSET_TAGS = (); }; };
+		55E9CFB41C1415030010CBDE /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E9CFB31C1415030010CBDE /* PieChartViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		55E9CFB61C1442330010CBDE /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E9CFB51C1442330010CBDE /* BarChartViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		55E9CFBC1C144C5A0010CBDE /* DataRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E9CFBB1C144C5A0010CBDE /* DataRepresentation.swift */; settings = {ASSET_TAGS = (); }; };
+		55E9CFBE1C144C960010CBDE /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E9CFBD1C144C960010CBDE /* DataType.swift */; settings = {ASSET_TAGS = (); }; };
 		55F4B4991BCD772A00BF8BF5 /* BanksMenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F4B4981BCD772A00BF8BF5 /* BanksMenuData.swift */; settings = {ASSET_TAGS = (); }; };
 		55F4B49B1BCD77AE00BF8BF5 /* ProductsMenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F4B49A1BCD77AE00BF8BF5 /* ProductsMenuData.swift */; settings = {ASSET_TAGS = (); }; };
 		55F4B49D1BCD78C100BF8BF5 /* BanksMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F4B49C1BCD78C100BF8BF5 /* BanksMenuViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -53,6 +57,10 @@
 		55E618EB1BBDC23400F2BE30 /* BanksComparisonMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanksComparisonMenuViewController.swift; sourceTree = "<group>"; };
 		55E618ED1BBDD20C00F2BE30 /* BanksComparisonMenuData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanksComparisonMenuData.swift; sourceTree = "<group>"; };
 		55E6E34F1BBE6BAA00EE20E1 /* MenuData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
+		55E9CFB31C1415030010CBDE /* PieChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
+		55E9CFB51C1442330010CBDE /* BarChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartViewController.swift; sourceTree = "<group>"; };
+		55E9CFBB1C144C5A0010CBDE /* DataRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRepresentation.swift; sourceTree = "<group>"; };
+		55E9CFBD1C144C960010CBDE /* DataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
 		55F4B4981BCD772A00BF8BF5 /* BanksMenuData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanksMenuData.swift; sourceTree = "<group>"; };
 		55F4B49A1BCD77AE00BF8BF5 /* ProductsMenuData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsMenuData.swift; sourceTree = "<group>"; };
 		55F4B49C1BCD78C100BF8BF5 /* BanksMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanksMenuViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +121,9 @@
 				559D23151B86578C00D97068 /* AppDelegate.swift */,
 				559D23171B86578C00D97068 /* ViewController.swift */,
 				559D23191B86578C00D97068 /* Main.storyboard */,
+				55E9CFB51C1442330010CBDE /* BarChartViewController.swift */,
+				55E9CFB31C1415030010CBDE /* PieChartViewController.swift */,
+				55E9CFBB1C144C5A0010CBDE /* DataRepresentation.swift */,
 				55B54E191BB9C408003D24DC /* ChartController.swift */,
 				55AAC3191B8CC03E00493AD5 /* MenuUIViewController.swift */,
 				559D231C1B86578C00D97068 /* Images.xcassets */,
@@ -120,6 +131,7 @@
 				559D23131B86578C00D97068 /* Supporting Files */,
 				55E618EB1BBDC23400F2BE30 /* BanksComparisonMenuViewController.swift */,
 				55F4B49C1BCD78C100BF8BF5 /* BanksMenuViewController.swift */,
+				55E9CFBD1C144C960010CBDE /* DataType.swift */,
 				55E618ED1BBDD20C00F2BE30 /* BanksComparisonMenuData.swift */,
 				55E6E34F1BBE6BAA00EE20E1 /* MenuData.swift */,
 				55F4B4981BCD772A00BF8BF5 /* BanksMenuData.swift */,
@@ -316,15 +328,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				55AAC31A1B8CC03E00493AD5 /* MenuUIViewController.swift in Sources */,
+				55E9CFBE1C144C960010CBDE /* DataType.swift in Sources */,
 				55E618EE1BBDD20C00F2BE30 /* BanksComparisonMenuData.swift in Sources */,
 				55E618EC1BBDC23400F2BE30 /* BanksComparisonMenuViewController.swift in Sources */,
+				55E9CFB61C1442330010CBDE /* BarChartViewController.swift in Sources */,
 				559D23181B86578C00D97068 /* ViewController.swift in Sources */,
 				55F4B4991BCD772A00BF8BF5 /* BanksMenuData.swift in Sources */,
 				55F4B49D1BCD78C100BF8BF5 /* BanksMenuViewController.swift in Sources */,
+				55E9CFB41C1415030010CBDE /* PieChartViewController.swift in Sources */,
 				55B54E1A1BB9C408003D24DC /* ChartController.swift in Sources */,
 				55E6E3501BBE6BAA00EE20E1 /* MenuData.swift in Sources */,
 				55F4B49B1BCD77AE00BF8BF5 /* ProductsMenuData.swift in Sources */,
 				55F4B49F1BCD78D900BF8BF5 /* ProductsMenuViewController.swift in Sources */,
+				55E9CFBC1C144C5A0010CBDE /* DataRepresentation.swift in Sources */,
 				559D23161B86578C00D97068 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
