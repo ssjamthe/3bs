@@ -1,0 +1,6 @@
+com/finfo/controller/BankComplaintController.class
+com/finfo/component/BankComplaints.class
+com/finfo/config/AppConfig.class
+com/finfo/config/AppInitializer.class
+com/finfo/service/BankComplaintsService.class
+com/finfo/service/imp/BankComplaintsServiceImpl.class
