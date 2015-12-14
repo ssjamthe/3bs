@@ -13,15 +13,40 @@ import Charts
 class PieChartViewController : UIViewController
 {
     
+    @IBOutlet weak var header: UILabel!
+    var menuData : MenuData!
     @IBOutlet weak var pieChart: PieChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let banks=["SBI","ICICI","HDFC","HSBC"]
-        let complaints=[10.0,5.0,15.0,20.0]
+        let banks : [String]!
+        let data : [Double]!
+        let dataLabel : String!
         
-        setPieChart(banks,values:complaints)
+        
+        switch(menuData.selectedDataType)
+        {
+        case .COMPLAINTS:
+            header.text = "Number of Complaints"
+            banks = ["HSBC","HDFC","SBI","ABN Amro"]
+            data = [50.0,70.0,20.0,10.0]
+            dataLabel = "Complaints"
+        case .TIMELY_RESPONSE_PERCENT:
+            header.text = "Timely Response Percent"
+            banks = ["ICICI","HDFC","SBI","ABN Amro"]
+            data = [5.0,17.0,40.0,12.0]
+            dataLabel = "Timely Response"
+        case .DISPUTED_RESPONSE_PERCENT:
+            header.text = "Disputed Response Percent"
+            banks = ["SBI","HDFC","SBI","ABN Amro"]
+            data = [15.0,19.0,10.0,15.0]
+            dataLabel = "Timely Response"
+        }
+        
+        setPieChart(banks,values:data,dataLabel:dataLabel)
+
+        
         
         print("Inside PieChartViewController.viewDidLoad " )
     }
@@ -31,7 +56,7 @@ class PieChartViewController : UIViewController
         // Dispose of any resources that can be recreated.
     }
     
-    func setPieChart(dataPoints: [String], values: [Double]) {
+    func setPieChart(dataPoints: [String], values: [Double],dataLabel:String) {
         
         var dataEntries: [ChartDataEntry] = []
         
@@ -40,7 +65,7 @@ class PieChartViewController : UIViewController
             dataEntries.append(dataEntry)
         }
         
-        let pieChartDataSet = PieChartDataSet(yVals: dataEntries, label: "Complaints")
+        let pieChartDataSet = PieChartDataSet(yVals: dataEntries, label: dataLabel)
         let pieChartData = PieChartData(xVals: dataPoints, dataSet: pieChartDataSet)
         pieChart.data = pieChartData
         

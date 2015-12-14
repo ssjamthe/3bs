@@ -13,14 +13,39 @@ import Charts
 class BarChartViewController : UIViewController
 {
     
+    @IBOutlet weak var header: UILabel!
+    var menuData : MenuData!
     @IBOutlet weak var barChart: BarChartView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let banks=["SBI","ICICI","HDFC","HSBC"]
-        let complaints=[10.0,5.0,15.0,20.0]
         
-        setBarChart(banks,values:complaints)
+        let banks : [String]!
+        let data : [Double]!
+        let dataLabel : String!
+        
+        
+        switch(menuData.selectedDataType)
+        {
+        case .COMPLAINTS:
+            header.text = "Number of Complaints"
+            banks = ["HSBC","HDFC","SBI","ABN Amro"]
+            data = [50.0,70.0,20.0,10.0]
+            dataLabel = "Complaints"
+        case .TIMELY_RESPONSE_PERCENT:
+            header.text = "Timely Response Percent"
+            banks = ["ICICI","HDFC","SBI","ABN Amro"]
+            data = [5.0,17.0,40.0,12.0]
+            dataLabel = "Timely Response"
+        case .DISPUTED_RESPONSE_PERCENT:
+            header.text = "Disputed Response Percent"
+            banks = ["SBI","HDFC","SBI","ABN Amro"]
+            data = [15.0,19.0,10.0,15.0]
+            dataLabel = "Timely Response"
+        }
+        
+        setBarChart(banks,values:data,dataLabel:dataLabel)
+
         
         print("Inside BarChartViewController.viewDidLoad " )
     }
@@ -30,7 +55,7 @@ class BarChartViewController : UIViewController
         // Dispose of any resources that can be recreated.
     }
     
-    func setBarChart(dataPoints: [String], values: [Double]) {
+    func setBarChart(dataPoints: [String], values: [Double],dataLabel:String) {
         
         var dataEntries: [BarChartDataEntry] = []
         
@@ -39,7 +64,7 @@ class BarChartViewController : UIViewController
             dataEntries.append(dataEntry)
         }
         
-        let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: "Complaints")
+        let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: dataLabel)
         let barChartData = BarChartData(xVals: dataPoints, dataSet: barChartDataSet)
         barChart.data = barChartData
         

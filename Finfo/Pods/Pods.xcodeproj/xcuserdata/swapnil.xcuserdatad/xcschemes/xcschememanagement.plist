@@ -14,15 +14,35 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-FinfoTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1D000CC43CF5A7FF8C4A9AC6B9DD4EDC</key>
+		<key>3526B907DE7A420205590CBDAD8504D4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A0D9E6797F861F721F8FFF893080284E</key>
+		<key>ACBDD603DC616FFE3B968489C087DD75</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C863E8F57D0B049D125E2FF246E39D20</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D69D9CDA8C2F6346A54BE66EEF4AFF0A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

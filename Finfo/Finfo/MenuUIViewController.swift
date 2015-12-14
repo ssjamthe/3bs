@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class MenuUIViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate {
     
@@ -14,6 +15,7 @@ class MenuUIViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     @IBOutlet weak var menuList: UITableView!
     @IBOutlet weak var dataTypePicker: UIPickerView!
     @IBOutlet weak var dataReprsentationPicker: UIPickerView!
+    @IBOutlet weak var durationPicker: UIPickerView!
     
     var productTextInputClicked = false
     var bankPlusClicked = false
@@ -25,6 +27,9 @@ class MenuUIViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     
     let dataTypePickerOptions=[["Complaints","Timely Response Percent","Disputed Response Percent"]]
     let dataTypeOptions = [[DataType.COMPLAINTS,DataType.TIMELY_RESPONSE_PERCENT,DataType.DISPUTED_RESPONSE_PERCENT]]
+    
+    let durationPickerOptions=[["Last Three Months","Last Six Months","Last Nine Months","Last One Year","Last Two Years","Last Three Years"]]
+    let durationOptions = [[Duration.LAST_THREE_MONTHS,Duration.LAST_SIX_MONTHS,Duration.LAST_NINE_MONTHS,Duration.LAST_ONE_YEAR,Duration.LAST_TWO_YEARS,Duration.LAST_THREE_YEARS]]
     
     var menuData : MenuData!
     
@@ -49,9 +54,14 @@ class MenuUIViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         self.dataTypePicker.delegate = self
         self.dataTypePicker.dataSource = self
         
+        self.durationPicker.delegate = self
+        self.durationPicker.dataSource = self
+        
         self.productTextInput.delegate = self
         
         self.productTextInput.text = self.menuData.selectedProduct
+        
+        
         
         print("Inside MenuUIViewController.viewDidLoad ")
         
@@ -86,6 +96,8 @@ class MenuUIViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = self.menuList.dequeueReusableCellWithIdentifier("cell") as UITableViewCell!
+        
+        
         
         if bankPlusClicked
         {
@@ -187,9 +199,13 @@ class MenuUIViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         {
             return dataTypePickerOptions.count
         }
-        else
+        else if(pickerView == dataReprsentationPicker)
         {
             return dataRepresentationPickerOptions.count
+        }
+        else
+        {
+            return durationOptions.count
         }
     }
     
@@ -203,9 +219,13 @@ class MenuUIViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
             
             return dataTypePickerOptions[component].count
         }
-        else
+        else if(pickerView == dataReprsentationPicker)
         {
             return dataRepresentationPickerOptions[component].count
+        }
+        else
+        {
+            return durationOptions[component].count
         }
         
     }
@@ -224,7 +244,7 @@ class MenuUIViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
             return dataTypePickerOptions[component][row]
             
         }
-        else
+        else if(pickerView == dataReprsentationPicker)
         {
             if(dataRepresentationOptions[component][row] == self.menuData.selectedRepresentation)
             {
@@ -232,6 +252,15 @@ class MenuUIViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
             }
             
             return dataRepresentationPickerOptions[component][row]
+        }
+        else
+        {
+            if(durationOptions[component][row] == self.menuData.selectedDuration)
+            {
+                pickerView.selectRow(row,inComponent: component,animated: false)
+            }
+            
+            return durationPickerOptions[component][row]
         }
         
     }
@@ -242,10 +271,14 @@ class MenuUIViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         {
             self.menuData.selectedDataType = dataTypeOptions[component][row]
         }
-        else
+        else if(pickerView == dataReprsentationPicker)
         {
             self.menuData.selectedRepresentation = dataRepresentationOptions[component][row]
             
+        }
+        else
+        {
+            self.menuData.selectedDuration = durationOptions[component][row]
         }
         
         
@@ -257,7 +290,7 @@ class MenuUIViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
             let svc = segue.destinationViewController as! ViewController;
             svc.menuData = menuData
             
-        }
+        } 
     }
     
     

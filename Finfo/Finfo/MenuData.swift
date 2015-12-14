@@ -25,4 +25,5 @@ class MenuData
     
     var selectedRepresentation = DataRepresentation.PIE_CHART
     var selectedDataType = DataType.COMPLAINTS
+    var selectedDuration = Duration.LAST_THREE_MONTHS
 }

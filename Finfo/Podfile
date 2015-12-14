@@ -2,12 +2,17 @@
 platform :ios, '8.0'
 use_frameworks!
 
-target 'Finfo' do
-pod 'Charts','2.1.4'
 
+
+target 'Finfo' do
+    pod 'SwiftyJSON', '2.3.2'
+    pod 'Charts','2.1.4'
+    
 end
 
 target 'FinfoTests' do
-
+    pod 'SwiftyJSON', '2.3.2'
+    pod 'Charts','2.1.4'
+    
 end
 
